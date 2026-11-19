@@ -110,6 +110,18 @@
     meta.className = "listing-meta";
     meta.textContent = item.walk + " min walk · 12 month lease";
 
+    const location = document.createElement("p");
+    location.className = "listing-location";
+    location.textContent = "Approximate area: " + item.street;
+
+    const mapLink = document.createElement("a");
+    mapLink.className = "map-link";
+    mapLink.href = "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(item.street + ", Antigonish, Nova Scotia");
+    mapLink.target = "_blank";
+    mapLink.rel = "noopener noreferrer";
+    mapLink.textContent = "View street in Google Maps";
+
     const footer = document.createElement("div");
     footer.className = "listing-footer";
 
@@ -131,7 +143,7 @@
     });
 
     footer.append(rent, button);
-    content.append(tag, title, text, meta, footer);
+    content.append(tag, title, text, meta, location, mapLink, footer);
     card.append(image, content);
     return card;
   }
@@ -151,7 +163,7 @@
     const bedroom = bedroomFilter.value;
     const rentCap = rentFilter.value;
     const matches = LISTINGS.filter(function (item) {
-      const text = (item.name + " " + item.category + " " + item.description).toLowerCase();
+      const text = (item.name + " " + item.category + " " + item.description + " " + item.street).toLowerCase();
       const matchesSearch = text.indexOf(query) !== -1;
       const bedrooms = parseInt(item.category, 10);
       const matchesBedroom =

@@ -327,6 +327,20 @@ main { max-width: 1120px; }
 .steps .card { min-height: 190px; border: 0; box-shadow: 0 12px 35px rgba(49,92,70,.07); }
 .explore-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
 .explore-heading h1 { margin: 6px 0 18px; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.04em; }
+.map-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin: 8px 0 20px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #e8eddf;
+}
+.map-panel h2 { margin: 4px 0; font-size: 1.25rem; }
+.map-panel p:not(.eyebrow) { max-width: 650px; margin: 0; color: var(--muted); }
+.map-panel .button { flex: 0 0 auto; margin: 0; }
 .filters { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; padding: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .search { margin: 0; }
 .search input, .filter-select select { width: 100%; max-width: none; height: 44px; background: var(--background); }
@@ -347,6 +361,8 @@ main { max-width: 1120px; }
 .listing-content .tag { background: #edf1e9; color: var(--brand); }
 .listing-content h2 { letter-spacing: -.02em; }
 .listing-meta { display: flex; gap: 12px; color: var(--muted); font-size: .85rem; margin: 10px 0 14px; }
+.listing-location { margin: 0 0 2px; color: var(--muted); font-size: .85rem; }
+.map-link { display: inline-block; margin-bottom: 14px; font-size: .85rem; font-weight: 650; }
 .listing-footer { display: flex; justify-content: space-between; align-items: center; }
 .rent { font-size: 1.1rem; font-weight: 800; }
 .rent small { color: var(--muted); font-size: .75rem; font-weight: 500; }
@@ -390,6 +406,7 @@ main { max-width: 1120px; }
   .hero { grid-template-columns: 1fr; gap: 10px; padding-top: 24px; }
   .hero-art { height: 280px; }
   .filters { grid-template-columns: 1fr; }
+  .map-panel { align-items: flex-start; flex-direction: column; }
   .explore-heading { align-items: start; }
   .about-layout { grid-template-columns: 1fr; }
   .network-panel { grid-template-columns: 1fr; }

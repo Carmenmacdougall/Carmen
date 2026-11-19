@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>X-House | StFX Student Housing</title>
   <meta name="description" content="Find fictional off-campus housing near St. Francis Xavier University.">
-  <link rel="stylesheet" href="styles.css?v=20261119-update">
+  <link rel="stylesheet" href="styles.css?v=20261119-maps">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
           <a class="button" href="#explore">Explore homes</a>
         </div>
         <div class="hero-art" role="img" aria-label="Aerial view of Antigonish, Nova Scotia">
-          <img src="assets/antigonish.jpg?v=20261119-update" alt="Aerial view of Antigonish, Nova Scotia">
+          <img src="assets/antigonish.jpg?v=20261119-maps" alt="Aerial view of Antigonish, Nova Scotia">
           <div class="scene-caption">
             <span>Antigonish, NS</span>
             <strong>Campus life starts here</strong>
@@ -96,10 +96,19 @@
         <p class="muted" id="listing-count"></p>
       </div>
 
+      <div class="map-panel">
+        <div>
+          <p class="eyebrow">Explore the neighbourhood</p>
+          <h2>Real Antigonish streets, fictional homes</h2>
+          <p>Explore real streets and houses around StFX in Google Maps. These 40 sample homes are fictional and link to approximate street areas, not verified rental addresses.</p>
+        </div>
+        <a class="button" href="https://www.google.com/maps/place/Antigonish,+NS/@45.6235848,-62.0138386,14z/data=!3m1!4b1!4m6!3m5!1s0x4b5c450e6ef092a7:0x502581ef8cf06f0!8m2!3d45.6224852!4d-61.9914382!16zL20vMDM3MGI4?entry=ttu&amp;g_ep=EgoyMDI2MTExNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open Antigonish in Google Maps</a>
+      </div>
+
       <div class="filters">
         <label class="search">
           <span>Search</span>
-          <input type="search" id="search-box" placeholder="Address or property name">
+          <input type="search" id="search-box" placeholder="Street or property name">
         </label>
         <label class="filter-select">
           <span>Bedrooms</span>
@@ -160,7 +169,7 @@
   </footer>
 
   <!-- Scripts load in this order: data first, then the code that uses it. -->
-  <script src="data.js?v=20261119-update"></script>
-  <script src="app.js?v=20261119-update"></script>
+  <script src="data.js?v=20261119-maps"></script>
+  <script src="app.js?v=20261119-maps"></script>
 </body>
 </html>
