@@ -36,7 +36,11 @@ Everything we wanted but faked or left out — real logins, a real database, pay
 
 | Feature we faked or skipped | Why a real company would need it | How hard / expensive? |
 |---|---|---|
-| | | |
+| Real authentication and database | To synchronize saves, listings, reviews, and users across devices | Moderate cost; use managed PaaS and database services |
+| Verified landlord and listing workflow | To prevent fake homes and keep availability current | Moderate to hard; needs staff, documents, and moderation |
+| Messaging and notifications | To connect students with landlords securely | Moderate; use a SaaS messaging provider or moderated platform |
+| Community reviews | To build network effects and housing quality signals | Hard over time; requires trust, moderation, and enough users |
+| Cloud monitoring and backups | To keep listings available and protect data | Moderate; use managed hosting, monitoring, and recovery plans |
 
 ## Reflection (fill in at the end)
 

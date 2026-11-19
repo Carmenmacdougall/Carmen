@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourStartup</title>
-  <meta name="description" content="A student startup prototype for BSAD 281.">
+  <title>X-House | StFX Student Housing</title>
+  <meta name="description" content="Find fictional off-campus housing near St. Francis Xavier University.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
        Each link points to a "view" further down the page (#home, #explore, #about).
        ========================================================= -->
   <header class="site-header">
-    <a class="brand" href="#home" id="brand-name">YourStartup</a>
+    <a class="brand" href="#home" id="brand-name">X-House</a>
     <nav aria-label="Main">
       <a href="#home">Home</a>
       <a href="#explore">Explore</a>
@@ -29,27 +29,58 @@
          ======================================================= -->
     <section id="home" data-view>
       <div class="hero">
-        <p class="eyebrow">Prototype</p>
-        <h1 id="tagline">One sentence that says what your startup does.</h1>
-        <p class="lead" id="pitch">
-          Who is your customer, what problem do they have, and why is your
-          solution better than what they use today?
-        </p>
-        <a class="button" href="#explore">See it in action</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Student housing near StFX</p>
+          <h1 id="tagline">Find your place in Antigonish.</h1>
+          <p class="lead" id="pitch">
+            Browse off-campus rooms and apartments made for StFX student life.
+          </p>
+          <a class="button" href="#explore">Explore homes</a>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a student neighborhood">
+          <div class="sun"></div>
+          <div class="cloud cloud-one"></div>
+          <div class="cloud cloud-two"></div>
+          <div class="house house-left"><span></span></div>
+          <div class="house house-main"><span></span></div>
+          <div class="house house-right"><span></span></div>
+          <div class="path"></div>
+        </div>
       </div>
 
+      <div class="section-heading">
+        <p class="eyebrow">Simple from search to move-in</p>
+        <h2>Housing without the hassle</h2>
+      </div>
       <div class="steps">
         <div class="card">
-          <h2>1. Step one</h2>
-          <p>Describe the first thing a customer does.</p>
+          <span class="step-number">01</span>
+          <h2>Search your area</h2>
+          <p>Filter by rent, bedrooms, and walk time to campus.</p>
         </div>
         <div class="card">
-          <h2>2. Step two</h2>
-          <p>Describe what happens next.</p>
+          <span class="step-number">02</span>
+          <h2>Compare homes</h2>
+          <p>Save the places you like and build a short list.</p>
         </div>
         <div class="card">
-          <h2>3. Step three</h2>
-          <p>Describe the result the customer gets.</p>
+          <span class="step-number">03</span>
+          <h2>Plan your move</h2>
+          <p>Check lease details and prepare questions for the landlord.</p>
+        </div>
+      </div>
+
+      <div class="network-panel">
+        <div class="network-copy">
+          <p class="eyebrow">The X-House network</p>
+          <h2>More students. Better housing.</h2>
+          <p>Every saved home, verified review, and landlord response improves the quality of the next student's search.</p>
+          <button class="button" id="join-network" type="button">Join the housing network</button>
+        </div>
+        <div class="network-stats" aria-label="Network growth example">
+          <div><strong id="student-stat">1,280</strong><span>active students</span></div>
+          <div><strong id="review-stat">430</strong><span>verified reviews</span></div>
+          <div><strong id="listing-stat">86</strong><span>active homes</span></div>
         </div>
       </div>
     </section>
@@ -58,15 +89,43 @@
          VIEW 2: EXPLORE — a list built from the fake data in data.js.
          ======================================================= -->
     <section id="explore" data-view hidden>
-      <h1>Explore</h1>
-      <p class="muted">These examples are fake. They come from <code>data.js</code>.</p>
+      <div class="explore-heading">
+        <div>
+          <p class="eyebrow">Antigonish, Nova Scotia</p>
+          <h1>Find your off-campus home</h1>
+        </div>
+        <p class="muted" id="listing-count"></p>
+      </div>
 
-      <label class="search">
-        <span>Search</span>
-        <input type="search" id="search-box" placeholder="Type to filter…">
-      </label>
+      <div class="filters">
+        <label class="search">
+          <span>Search</span>
+          <input type="search" id="search-box" placeholder="Address or property name">
+        </label>
+        <label class="filter-select">
+          <span>Bedrooms</span>
+          <select id="bedroom-filter">
+            <option value="all">Any bedrooms</option>
+            <option value="1">1 bedroom</option>
+            <option value="2">2 bedrooms</option>
+            <option value="3">3+ bedrooms</option>
+          </select>
+        </label>
+        <label class="filter-select">
+          <span>Monthly rent</span>
+          <select id="rent-filter">
+            <option value="all">Any rent</option>
+            <option value="900">Under $900</option>
+            <option value="1200">Under $1,200</option>
+            <option value="1500">Under $1,500</option>
+          </select>
+        </label>
+      </div>
 
-      <p class="muted" id="saved-count"></p>
+      <div class="saved-bar">
+        <p class="muted" id="saved-count"></p>
+        <button class="text-button" id="show-saved" type="button" aria-pressed="false">Show saved</button>
+      </div>
       <div class="grid" id="listing-grid"></div>
       <p class="empty" id="empty-message" hidden>Nothing matches your search.</p>
     </section>
@@ -75,9 +134,23 @@
          VIEW 3: ABOUT — your team and your story.
          ======================================================= -->
     <section id="about" data-view hidden>
-      <h1>About us</h1>
-      <p>Tell the story of why your team started this company.</p>
-      <p>Use first names only, or no names at all — this site is public.</p>
+      <div class="about-layout">
+        <div>
+          <p class="eyebrow">About X-House</p>
+          <h1>Built for the StFX community.</h1>
+          <p class="lead">We make the search for off-campus student housing simpler, clearer, and more manageable.</p>
+          <p>Moving away from campus can mean unfamiliar neighbourhoods and competing listings. X-House brings useful details together so students can compare options before making a decision.</p>
+        </div>
+        <div class="about-panel">
+          <h2>Our priorities</h2>
+          <ul>
+            <li>Clear monthly costs</li>
+            <li>Realistic walk times</li>
+            <li>Student-friendly filters</li>
+            <li>Privacy and transparent fake data</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>
