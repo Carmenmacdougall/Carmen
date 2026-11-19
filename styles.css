@@ -185,22 +185,39 @@ main { max-width: 1120px; }
 .hero-copy .lead { max-width: 470px; }
 .hero-art {
   position: relative;
-  height: 340px;
+  height: 390px;
   overflow: hidden;
-  border-radius: 220px 220px 24px 24px;
-  background: linear-gradient(180deg, #a9ccd5 0%, #dce4c9 58%, #94ad83 59%, #6f906a 100%);
+  border-radius: 24px;
+  background: #dce4c9;
+  box-shadow: 0 24px 60px rgba(35, 70, 54, 0.18);
 }
+.hero-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 700ms ease;
+}
+.hero-art:hover img { transform: scale(1.025); }
 .hero-art::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 88px;
-  background: linear-gradient(160deg, transparent 38%, rgba(50,91,62,.35) 39%, transparent 42%);
-  border-bottom: 28px solid #4f754b;
-  z-index: 3;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(20, 43, 31, 0.48) 100%);
+  pointer-events: none;
 }
+.photo-credit {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  z-index: 9;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.58rem;
+  text-decoration: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+.photo-credit:hover { color: #fff; text-decoration: underline; }
 .sun { position: absolute; width: 54px; height: 54px; border-radius: 50%; background: #f1c66e; right: 48px; top: 38px; box-shadow: 0 0 28px rgba(241,198,110,.65); }
 .cloud { position: absolute; width: 62px; height: 16px; border-radius: 20px; background: rgba(255,255,255,.72); }
 .cloud::before, .cloud::after { content: ""; position: absolute; border-radius: 50%; background: inherit; }
