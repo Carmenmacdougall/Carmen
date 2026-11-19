@@ -4,23 +4,22 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 
 **Team name:**
 **Startup name:**
-**Live site link:**
+**Live site link:** https://carmenmacdougall.github.io/Carmen/
 
 ---
 
 ## Work sessions
 
-Copy this block for each session.
+### Session 1 — 2026-11-19 — driver: not recorded
 
-### Session — [date] — driver: [first name]
-
-- **Goal for this session:**
+- **Goal for this session:** Create and improve the X-House student-housing website for Antigonish.
 - **Key prompts we gave Copilot** (paste the important ones):
-  1.
-  2.
-- **What worked:**
-- **What broke, and how we fixed it:**
-- **Committed?** yes / no — commit message:
+  1. "Incorporate Google Maps to make the streets actual street addresses and houses in Antigonish."
+  2. "Add 30-50 houses on actual streets in Antigonish, Nova Scotia."
+  3. "Make a few with 5 and 6 bedrooms; just change a few."
+- **What worked:** The X-House site uses a scenic Antigonish image and has 40 fictional housing listings on real street names, including College, West, St. Ninian, Church, and Main Streets. The Explore page links to Google Maps for Antigonish and to each listing's approximate street area. Three listings have 5 bedrooms and two have 6. The listings remain fictional and do not expose exact home addresses.
+- **What broke, and how we fixed it:** No major issues. Google Maps opens through links rather than an embedded map; listing locations are approximate because the homes are fictional.
+- **Committed?** yes — "add the few changes to some houses being 5 and 6 room"
 
 ---
 
