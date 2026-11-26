@@ -82,6 +82,7 @@
   const emptyMessage = document.getElementById("empty-message");
   const savedCount = document.getElementById("saved-count");
   const listingCount = document.getElementById("listing-count");
+  const preferenceNote = document.getElementById("preference-note");
   let showSavedOnly = false;
 
   function makeCard(item) {
@@ -162,6 +163,23 @@
     const query = searchBox.value.trim().toLowerCase();
     const bedroom = bedroomFilter.value;
     const rentCap = rentFilter.value;
+    const savedByStreet = {};
+    savedIds.forEach(function (savedId) {
+      const savedListing = LISTINGS.find(function (item) { return item.id === savedId; });
+      if (savedListing) {
+        savedByStreet[savedListing.street] = (savedByStreet[savedListing.street] || 0) + 1;
+      }
+    });
+
+    let preferredStreet = "";
+    let mostSavedOnStreet = 0;
+    Object.keys(savedByStreet).forEach(function (street) {
+      if (savedByStreet[street] > mostSavedOnStreet) {
+        preferredStreet = street;
+        mostSavedOnStreet = savedByStreet[street];
+      }
+    });
+
     const matches = LISTINGS.filter(function (item) {
       const text = (item.name + " " + item.category + " " + item.description + " " + item.street).toLowerCase();
       const matchesSearch = text.indexOf(query) !== -1;
@@ -174,12 +192,23 @@
       return matchesSearch && matchesBedroom && matchesRent && matchesSaved;
     });
 
+    if (preferredStreet) {
+      matches.sort(function (a, b) {
+        return Number(b.street === preferredStreet) - Number(a.street === preferredStreet);
+      });
+    }
+
     grid.replaceChildren.apply(grid, matches.map(makeCard));
     emptyMessage.hidden = matches.length > 0;
-    listingCount.textContent = matches.length + " homes found";
+    listingCount.textContent = matches.length + " homes found" +
+      (preferredStreet ? " · " + preferredStreet + " shown first" : "");
     savedCount.textContent = savedIds.length === 0
       ? "Tap Save on anything you like."
       : "You have " + savedIds.length + " saved home(s).";
+    preferenceNote.textContent = preferredStreet
+      ? "Your saved homes show a preference for " + preferredStreet +
+        ". Matching homes appear first. This demo stores choices only in this browser."
+      : "Save homes to personalize the order by street. This demo stores choices only in this browser.";
   }
 
   searchBox.addEventListener("input", renderListings);

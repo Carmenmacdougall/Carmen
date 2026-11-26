@@ -57,5 +57,11 @@ const LISTINGS = [
   { id: 37, name: "College View Apartment", category: "2 bedroom", description: "Two-bedroom unit with a sunny living room and laundry.", rent: 1240, walk: 8, street: "College Street", accent: "gold" },
   { id: 38, name: "West River Rooms", category: "3 bedroom", description: "Three private rooms in a shared home with a common lounge.", rent: 1325, walk: 18, street: "West Street", accent: "green" },
   { id: 39, name: "Ninian Place North", category: "5 bedroom", description: "Five-bedroom student home with a shared kitchen and porch.", rent: 2100, walk: 11, street: "St. Ninian Street", accent: "maple" },
-  { id: 40, name: "Church Street Garden Flat", category: "2 bedroom", description: "Ground-floor apartment with garden access and bike storage.", rent: 1270, walk: 15, street: "Church Street", accent: "gold" }
+  { id: 40, name: "Church Street Garden Flat", category: "2 bedroom", description: "Ground-floor apartment with garden access and bike storage.", rent: 1270, walk: 15, street: "Church Street", accent: "gold" },
+  { id: 41, name: "The Highland Terrace", category: "4 bedroom", description: "Four-bedroom shared home with an open dining room and private parking.", rent: 1680, walk: 12, street: "College Street", accent: "green" },
+  { id: 42, name: "Maple Lane Apartment", category: "1 bedroom", description: "Renovated apartment with a bright study area and in-suite storage.", rent: 865, walk: 16, street: "West Street", accent: "maple" },
+  { id: 43, name: "Ninian Creek Home", category: "3 bedroom", description: "Three-bedroom house near the river with a furnished living room.", rent: 1460, walk: 11, street: "St. Ninian Street", accent: "blue" },
+  { id: 44, name: "Town Hall Suite", category: "2 bedroom", description: "Central upper-floor suite close to shops, with water included.", rent: 1180, walk: 18, street: "Main Street", accent: "gold" },
+  { id: 45, name: "The Orchard House", category: "4 bedroom", description: "Spacious student house with four furnished rooms and a backyard.", rent: 1725, walk: 14, street: "Church Street", accent: "green" },
+  { id: 46, name: "College Crescent Loft", category: "2 bedroom", description: "Modern loft-style apartment with laundry and a quiet reading nook.", rent: 1310, walk: 7, street: "College Street", accent: "blue" }
 ];

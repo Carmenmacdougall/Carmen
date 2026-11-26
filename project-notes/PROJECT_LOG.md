@@ -10,6 +10,25 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 
 ## Work sessions
 
+### Session 3 - 2026-11-26 - driver: Copilot
+
+- **Goal for this session:** Tailor home recommendations to customer street preferences.
+- **Key prompts we gave Copilot** (paste the important ones):
+  1. "also make the website be aligned with customer preferences so if more customers want houses a certain street the website will be tailored to that"
+  2. "add this into the project log"
+- **What worked:** Saved homes now help prioritize listings on the street the visitor has saved most. The prototype clearly notes that preferences are stored only in the current browser.
+- **What broke, and how we fixed it:** Cross-customer popularity cannot be calculated by this static prototype; that would require a shared backend and database.
+- **Committed?** no — pending review and commit.
+
+### Session 2 - 2026-11-25 - driver: Copilot
+
+- **Goal for this session:** Add more fictional housing listings to the Explore page.
+- **Key prompts we gave Copilot** (paste the important ones):
+  1. "in my website could you please add a few more houses on the website"
+- **What worked:** Added six new listings (IDs 41-46), bringing the total to 46 homes across the existing Antigonish street areas.
+- **What broke, and how we fixed it:** No issues found.
+- **Committed?** no — pending review and commit.
+
 ### Session 1 — 2026-11-19 — driver: not recorded
 
 - **Goal for this session:** Create and improve the X-House student-housing website for Antigonish.
