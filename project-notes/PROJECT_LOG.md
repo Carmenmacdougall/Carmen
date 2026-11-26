@@ -36,8 +36,8 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
   1. "Incorporate Google Maps to make the streets actual street addresses and houses in Antigonish."
   2. "Add 30-50 houses on actual streets in Antigonish, Nova Scotia."
   3. "Make a few with 5 and 6 bedrooms; just change a few."
-- **What worked:** The X-House site uses a scenic Antigonish image and has 40 fictional housing listings on real street names, including College, West, St. Ninian, Church, and Main Streets. The Explore page links to Google Maps for Antigonish and to each listing's approximate street area. Three listings have 5 bedrooms and two have 6. The listings remain fictional and do not expose exact home addresses.
-- **What broke, and how we fixed it:** No major issues. Google Maps opens through links rather than an embedded map; listing locations are approximate because the homes are fictional.
+- **What worked:** The X-House site has 40 fictional housing listings on real street names, including College, West, St. Ninian, Church, and Main Streets. The Explore page links to Google Maps for Antigonish and to each listing's approximate street area. Three listings have 5 bedrooms and two have 6. The listings remain fictional and do not expose exact home addresses.
+- **What broke, and how we fixed it:** When I first created the website I added a scenic  image of the town of Antigonish. I kept clicking commit but the image was not showing up. I kept trying different solutions but for some reason it wasn't showing up on my website. I then realized that my website was private so I went into settings and changed it to be public and the image appeared after. 
 - **Committed?** yes — "add the few changes to some houses being 5 and 6 room"
 
 ---
@@ -63,5 +63,8 @@ Everything we wanted but faked or left out — real logins, a real database, pay
 ## Reflection (fill in at the end)
 
 1. What surprised you most about building software with AI?
+What surprised me the most about building a software with AI is that creating the actual website is not that difficult. But, as I did the business case and answered the questions like "What would it take for this website to be real?" Or "Think about risks and ethics", I realized how much work and time it would take to create a successful website that protects users privacy, has network effects, and is not easy to copy.
 2. Which parts were easy, and which were hard? Why do you think that is?
-3. If a competitor had the same AI tool, how long would it take them to copy your site?
+The easy part was telling the chat box what I wanted it to create, and then it creating it for me. The harder parts were trying to problem solve when technology wasn't working. When I first created my website, I was having a hard time getting AI to make the changes I wanted to make, for my website. For example, I told it to incorporate Google Maps to use real streets in Antigonish, but it was having a hard time understanding what I meant. The business case also took much more time and worked-out organized thoughts to create, than the actual website. It took me time to think about things like value-chain activities that IT changes or network effects.
+4. If a competitor had the same AI tool, how long would it take them to copy your site?
+If a competitor had the same AI tool, I think it would take them less than a weekend to copy the site X-House. This is because the website itself is not the competitive advantage, which I addressed in my business case. The competitive advantage would be the brand's image, their reputation, and their focus on supporting the local landlords of Antigonish. It would be hard for a competitor with a big budget to copy a brand built on connection within the community. Another competitive advantage for X-House would be the data they collect about customer preferences if the website was launched. This competitive advantage of collecting data would strengthen as more data is collected. 
